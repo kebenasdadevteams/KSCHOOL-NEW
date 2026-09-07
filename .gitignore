@@ -1,0 +1,16 @@
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+*.log
+backend/config/service-account.json
+**/service-account.json
+.env
+.env.*
+!.env.example
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vercel/

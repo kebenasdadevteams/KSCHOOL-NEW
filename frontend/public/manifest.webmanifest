@@ -1,0 +1,29 @@
+{
+  "name": "Kebena SDA Church",
+  "short_name": "Kebena SDA",
+  "description": "Kebena Seventh-Day Adventist Church community app",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "portrait-primary",
+  "background_color": "#fffaf2",
+  "theme_color": "#865014",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

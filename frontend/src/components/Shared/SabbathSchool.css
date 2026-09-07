@@ -1,0 +1,471 @@
+/* SabbathSchool.css */
+
+.sabbath-school-page {
+  padding: 2rem 0 4rem;
+  background: #f8f5f0;
+  min-height: 100vh;
+}
+
+.sabbath-school-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Current Lesson Section */
+.current-lesson-section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8e3dc;
+}
+
+.lesson-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0ebe4;
+}
+
+.lesson-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sabbath-page-kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a7a6a;
+  background: #f0ebe4;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.lesson-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d241c;
+  margin: 0;
+}
+
+.lesson-action-btn {
+  background: #2d5a3e;
+  color: #ffffff;
+  padding: 0.7rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.lesson-action-btn:hover {
+  background: #1f4530;
+  color: #ffffff;
+}
+
+/* Lesson Meta Grid */
+.lesson-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f8f5f0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+}
+
+.lesson-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8a7a6a;
+}
+
+.meta-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d241c;
+}
+
+.focus-value {
+  color: #2d5a3e;
+  font-size: 1.1rem;
+}
+
+/* Video Section */
+.lesson-video-section {
+  margin-bottom: 2rem;
+}
+
+.video-placeholder-box {
+  background: #1a1a2e;
+  border-radius: 16px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-unavailable-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a0a0b8;
+}
+
+.unavailable-icon {
+  font-size: 3rem;
+}
+
+.video-unavailable-message p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c0c0d8;
+  margin: 0;
+}
+
+/* Lesson Content */
+.lesson-content-box {
+  background: #f8f5f0;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+}
+
+.lesson-verse-theme {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.verse-tag {
+  background: #2d5a3e;
+  color: #ffffff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.theme-tag {
+  background: #8a7a6a;
+  color: #ffffff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.lesson-note {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3d342c;
+  margin: 0;
+}
+
+/* Quarters Section */
+.quarters-section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8e3dc;
+}
+
+.quarters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quarters-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d241c;
+  margin: 0;
+}
+
+.quarters-subtitle {
+  color: #8a7a6a;
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0;
+}
+
+/* Search and Filter */
+.search-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-wrapper {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  background: #f8f5f0;
+  border-radius: 40px;
+  padding: 0 1rem;
+  border: 1px solid #e0d8d0;
+  transition: border-color 0.2s ease;
+}
+
+.search-wrapper:focus-within {
+  border-color: #2d5a3e;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: #8a7a6a;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.7rem 0.5rem;
+  font-size: 0.95rem;
+  color: #2d241c;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #aaa090;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 40px;
+  border: 1px solid #e0d8d0;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5d4c3c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+  background: #f0ebe4;
+  border-color: #c0b0a0;
+}
+
+.filter-tab.active {
+  background: #2d5a3e;
+  border-color: #2d5a3e;
+  color: #ffffff;
+}
+
+/* Quarters Grid */
+.quarters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.quarter-card {
+  background: #faf8f5;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e8e3dc;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.quarter-card:hover {
+  border-color: #c0b0a0;
+  transform: translateY(-2px);
+}
+
+.quarter-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.quarter-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  background: #2d5a3e;
+  color: #ffffff;
+}
+
+.quarter-tag:contains("InVerse") {
+  background: #8a6a4a;
+}
+
+.quarter-date-badge {
+  font-size: 0.7rem;
+  color: #8a7a6a;
+  background: #f0ebe4;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+}
+
+.quarter-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d241c;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.quarter-summary {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5d4c3c;
+  margin: 0 0 1rem 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.quarter-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e8e3dc;
+}
+
+.quarter-label {
+  font-size: 0.8rem;
+  color: #8a7a6a;
+}
+
+.quarter-view-btn {
+  padding: 0.35rem 1.25rem;
+  border-radius: 40px;
+  border: none;
+  background: #2d5a3e;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quarter-view-btn:hover {
+  background: #1f4530;
+}
+
+/* No Results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 0;
+  color: #8a7a6a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sabbath-school-page {
+    padding: 1rem 0 2rem;
+  }
+
+  .current-lesson-section,
+  .quarters-section {
+    padding: 1.5rem;
+  }
+
+  .lesson-header-wrap {
+    flex-direction: column;
+  }
+
+  .lesson-page-title {
+    font-size: 1.5rem;
+  }
+
+  .lesson-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lesson-meta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quarters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-filter-bar {
+    flex-direction: column;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .filter-tabs {
+    width: 100%;
+  }
+
+  .filter-tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  .lesson-content-box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quarter-card {
+    padding: 1rem;
+  }
+}
