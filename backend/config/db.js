@@ -6,7 +6,7 @@ if (process.env.MYSQL_URL) {
   pool = mysql2.createPool(process.env.MYSQL_URL);
 } else {
   pool = mysql2.createPool({
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT) || 3306,
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',

@@ -24,8 +24,8 @@ app.set('trust proxy', 1);
 // FIXED CORS CONFIGURATION
 // ============================================
 const allowedOrigins = [
-  'https://www.kebenasdachurch.org',
-  'https://kebenasdachurch.org'
+  'http://localhost:5173',
+  'http://127.0.0.1:5173'
 ];
 
 // Also check environment variable if set
@@ -114,8 +114,12 @@ app.use(errorMiddleware);
 const port = Number(process.env.PORT) || 5000;
 
 if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`✅ K-School API listening on port ${port}`);
+  const { testConnection } = require('./config/db');
+
+  testConnection().then(() => {
+    app.listen(port, () => {
+      console.log(`✅ K-School API listening on port ${port}`);
+    });
   });
 }
 

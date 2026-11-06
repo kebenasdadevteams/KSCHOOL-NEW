@@ -285,15 +285,25 @@ export function SidebarLayout({
     || userRole === 'developer';
 
   type RoleOption = { view: ActiveView; label: string; icon: React.ComponentType<any> };
-  const isDeveloper = userRoles.includes('developer');
-  const roleOptions: RoleOption[] = [
-    { view: 'student', label: 'Student View', icon: UserCircle },
-    ...(isDeveloper || userRoles.includes('teacher') ? [{ view: 'teacher', label: 'Teacher View', icon: GraduationCap }] as RoleOption[] : []),
-    ...(isDeveloper || userRoles.includes('pastor') ? [{ view: 'pastor', label: 'Pastor View', icon: Church }] as RoleOption[] : []),
-    ...(isDeveloper || userRoles.includes('editor') ? [{ view: 'editor', label: 'Editor View', icon: FileText }] as RoleOption[] : []),
-    ...(isDeveloper || userRoles.includes('admin') ? [{ view: 'admin', label: 'Admin View', icon: Shield }] as RoleOption[] : []),
-    ...(userRoles.includes('developer') ? [{ view: 'developer', label: 'Developer View', icon: Shield }] as RoleOption[] : []),
-  ];
+  const isDeveloper = userRoles.includes('developer') || userRole === 'developer';
+
+  // Developers get every view available in the switcher.
+  const roleOptions: RoleOption[] = isDeveloper
+    ? [
+        { view: 'student', label: 'Student View', icon: UserCircle },
+        { view: 'teacher', label: 'Teacher View', icon: GraduationCap },
+        { view: 'pastor', label: 'Pastor View', icon: Church },
+        { view: 'editor', label: 'Editor View', icon: FileText },
+        { view: 'admin', label: 'Admin View', icon: Shield },
+        { view: 'developer', label: 'Developer View', icon: Shield },
+      ]
+    : [
+        { view: 'student', label: 'Student View', icon: UserCircle },
+        ...(userRoles.includes('teacher') ? [{ view: 'teacher', label: 'Teacher View', icon: GraduationCap }] as RoleOption[] : []),
+        ...(userRoles.includes('pastor') ? [{ view: 'pastor', label: 'Pastor View', icon: Church }] as RoleOption[] : []),
+        ...(userRoles.includes('editor') ? [{ view: 'editor', label: 'Editor View', icon: FileText }] as RoleOption[] : []),
+        ...(userRoles.includes('admin') ? [{ view: 'admin', label: 'Admin View', icon: Shield }] as RoleOption[] : []),
+      ];
 
   const currentRoleOption = roleOptions.find((option) => option.view === activeView) ?? roleOptions[0];
   const CurrentRoleIcon = currentRoleOption.icon;

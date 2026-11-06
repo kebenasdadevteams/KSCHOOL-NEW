@@ -24,8 +24,8 @@ app.set('trust proxy', 1);
 // CORS CONFIGURATION
 // ============================================
 const allowedOrigins = [
-  'https://www.kebenasdachurch.org',
-  'https://kebenasdachurch.org'
+  'http://localhost:5173',
+  'http://127.0.0.1:5173'
 ];
 
 const envOrigins = (process.env.FRONTEND_URL || '')
